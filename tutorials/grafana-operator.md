@@ -4,7 +4,7 @@ description: This tutorial explains how to create Grafana Operator
 ---
 
 
-### Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard: 
+### Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard 
 
 
 Install Grafana Operator from operatorhub.
@@ -57,7 +57,7 @@ Note: If you are installing from operatorhub, then by default it installs the op
 Below steps assumes that its deployed in my-grafana-operator namespace. 
 
 
-### Deploy Grafana Server Instance and Grafana Data-Source:
+### Deploy Grafana Server Instance and Grafana Datasource
 
 
 Step 3: Create below yaml definition of the Custom Resource to create Grafana Instance:
