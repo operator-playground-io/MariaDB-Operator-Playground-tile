@@ -10,13 +10,13 @@ Mariadb Operator enables you to create MariaDB server and database easily by def
 
 ### Operator's features are as follows:
 
-- Setup a MariaDB server with configured version
+- Setup a MariaDB server with configured version.
 
-- Create a custom database along with a user credential set for the custom database
+- Create a custom database along with a user credential set for the custom database.
 
-- Operator uses Persistent Volume where MariaDB can write its data files
+- Operator uses Persistent Volume where MariaDB can write its data files.
 
-- Seamless upgrades of MariaDB is possible without loosing existing data
+- Seamless upgrades of MariaDB is possible without loosing existing data.
 
 - Take full backup of Database at user defined location.
 
@@ -29,10 +29,10 @@ Mariadb Operator enables you to create MariaDB server and database easily by def
 
 In this tutorial,we are going to cover following topics:
 
-1. How to Install MariaDB Operator and verify its successful installation.
-2. Create Instance Of MariaDB Operator and verify status of pods and services.
-3. How to access DB Instance and create database tables on MariaDB.
-4. How to Schedule backup of MariaDB at regular intervals.
-5. Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
-6. Cleanup Operators.
+- How to Install MariaDB Operator and verify its successful installation.
+- Create Instance Of MariaDB Operator and verify status of pods and services.
+- How to access DB Instance and create database tables on MariaDB.
+- How to Schedule backup of MariaDB at regular intervals.
+- Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
+- Cleanup Operators.
   
