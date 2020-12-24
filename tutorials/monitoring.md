@@ -7,7 +7,7 @@ description: This tutorial explains how to Enable Monitoring service to MariaDB
 
 Step1: 
 
-- Execute below command to get services of MariadB in "my-mariadb-operator-app" namespace :
+- Execute below command to get services of MariadB in "my-mariadb-operator-app" namespace:
   
   ```execute
   kubectl get svc -n my-mariadb-operator-app
@@ -20,7 +20,7 @@ Step1:
  mariadb-service            NodePort    10.106.178.202   <none>        80:30685/TCP        3d4h
  ```
  
-- Get the port of mariadb-service :
+- Get the port of mariadb-service:
   
   From above command output, mariadb-service port is 30685 
 
@@ -68,7 +68,7 @@ This will start Prometheus exporter pod and service.
 
 
 
-## Create monitoring resources :
+## Create monitoring resources 
 
 To enable monitoring services, you need to :
 
@@ -81,12 +81,12 @@ If above prerequisites are already fullfilled, you can proceed with Step2 and St
 Else proceed as follows: 
 
 
-### Step 1: Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor :
+### Step 1: Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor
  
  Please go to Prometheus operator tutorial.
 
 
-### Step 2: Verify prometheus monitoring metrics :
+### Step 2: Verify prometheus monitoring metrics
 
 Access the Prometheus dashboard using below link:
 
@@ -107,7 +107,7 @@ http://##DNS.ip##:30100
 
 
 
-### Step 3: Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source: 
+### Step 3: Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source
 
 
 Please go to Grafana Operator tutorial 
