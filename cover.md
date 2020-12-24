@@ -34,7 +34,7 @@ In this tutorial,we are going to cover following topics:
 - How to access DB Instance and create database tables on MariaDB.
 - How to Schedule backup of MariaDB at regular intervals.
 - Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
-- Cleanup Operators.
+
 
 
 
