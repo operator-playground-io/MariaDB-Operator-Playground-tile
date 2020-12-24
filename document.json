@@ -14,6 +14,9 @@
          "Operators"
       ],
     "Install time": ["5 minutes"]
+    "categories": [
+      "Database"
+    ]
   },
 "deployment_information": {
   "Operator Project": "NA",
