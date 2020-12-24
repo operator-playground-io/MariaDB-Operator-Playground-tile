@@ -13,51 +13,51 @@
       },	   
       
       {
-         "description":"learn how to create Instance of MariaDB operator",
+         "description":"Learn how to create Instance of MariaDB operator",
          "duration":"10 min",
          "tutorial_name":"create-instance.md",
          "title":"2: Create Instance of MariaDB"
       },
 	  {
-         "description":"learn how to access MariadB database",
+         "description":"Learn how to access MariadB database",
          "duration":"10 min",
          "tutorial_name":"access-database.md",
          "title":"3: Access MariadB database"
       },
       {
-         "description":"how to schedule backup service of MariaDB Server",
+         "description":"How to schedule backup service of MariaDB Server",
          "duration":"10 min",
          "tutorial_name":"backup.md",
          "title":"4: Schedule Backup of MariaDB"
       },
       {
-         "description":" how to enable monitoring service on MariaDB",
+         "description":"How to enable monitoring service on MariaDB",
          "duration":"30 min",
          "tutorial_name":"monitoring.md",
          "title":"5: Enable Monitoring Service"
       },
 	  
 	  {
-         "description":"create Prometheus Operator to enable monitoring services on MariaDB",
+         "description":"Create Prometheus Operator to enable monitoring services on MariaDB",
          "duration":"30 min",
          "tutorial_name":"prometheus-operator.md",
          "title":"6: Create Prometheus Operator"
       },
 	  {
-         "description":"create grafana operator to enable monitoring services on MariaDB",
+         "description":"Create grafana operator to enable monitoring services on MariaDB",
          "duration":"30 min",
          "tutorial_name":"grafana-operator.md",
          "title":"7: Create Grafana Operator"
       },
 	{
-         "description":" create Grafana Dashboard to visualise MariaDB Metrics",
+         "description":"Create Grafana Dashboard to visualise MariaDB Metrics",
          "duration":"30 min",
          "tutorial_name":"access-grafana-dashboard.md",
          "title":"8: Grafana Dashboard"
       },
        	   
 	  {
-         "description":"steps to cleanup Operator",
+         "description":"Steps to cleanup Operator",
          "duration":"10 min",
          "tutorial_name":"cleanup.md",
          "title":"9: Cleanup Operator"
