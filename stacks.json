@@ -1,7 +1,7 @@
 {
    "title": "MariaDB Operator",
    "description": "MariaDB Operator",
-   "logo": "_images/logo.png",
+   "logo": "_images/SalesStack.png",
    "enabled": true,
    "category_label": [
      "Operators"
