@@ -66,9 +66,9 @@
    ],
    "usefulLinks":[
       {
-         "title":"Crunchy PostgreSQL Operator",
-         "description":"Crunchy PostgreSQL Operator ",
-         "url":"https://operatorhub.io/operator/postgresql"
+         "title":"MariaDB Operator",
+         "description":"MariaDB Operator ",
+         "url":"https://operatorhub.io/operator/mariadb-operator-app"
       }
    ]
 }
