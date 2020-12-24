@@ -31,8 +31,8 @@ In this tutorial,we are going to cover following topics:
 
 1. How to Install MariaDB Operator and verify its successful installation.
 2. Create Instance Of MariaDB Operator and verify status of pods and services.
-3. How to access DB Instance and create database tables on MariaDB
-4. How to Schedule backup of MariaDB at regular intervals
+3. How to access DB Instance and create database tables on MariaDB.
+4. How to Schedule backup of MariaDB at regular intervals.
 5. Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
-6. Cleanup Operators
+6. Cleanup Operators.
   
