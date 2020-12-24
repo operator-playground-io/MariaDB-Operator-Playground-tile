@@ -83,7 +83,7 @@ Else proceed as follows:
 
 ### Step 1: Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor
  
- Learn how to Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor from this tutorial's "6: Create Prometheus Operator" tile.
+ Learn how to Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor from tutorial "6: Create Prometheus Operator".
 
 
 ### Step 2: Verify prometheus monitoring metrics
@@ -110,7 +110,7 @@ http://##DNS.ip##:30100
 ### Step 3: Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source
 
 
-Learn how to Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source from this tutorial's "7: Create Grafana Operator" tile.
+Learn how to Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source from tutorial "7: Create Grafana Operator".
 
 
 
@@ -171,7 +171,7 @@ Now you will be able to see the Dashboard like below:
 
 ### Configure Grafana Dashboard to visualise MariaDB monitoring metrics
 
-Learn how to Configure Grafana Dashboard to visualise MariaDB monitoring metrics from this tutorial's "8: Grafana Dashboard" tile.
+Learn how to Configure Grafana Dashboard to visualise MariaDB monitoring metrics from this tutorial "8: Grafana Dashboard".
 
 
 
