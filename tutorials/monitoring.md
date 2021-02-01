@@ -97,7 +97,7 @@ http://##DNS.ip##:30100
 
  ![](_images/targets.PNG)
 
-
+Note: It may take some time to visible Target's endpoints.
 
 - From the dropdown you can select the query and click on "Execute" to see MariaDB Metrics. See below snapshot :
 
