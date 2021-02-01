@@ -13,7 +13,7 @@ description: This tutorial is to verify operator have been created successfully 
 kubectl get csv -n my-mariadb-operator-app
 ```
 
-output:
+Output:
 
 ```
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
@@ -29,7 +29,7 @@ Note: Once operator is successfully installed, Output PHASE should be as "Succee
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-output:
+Output:
 
 ```
 NAME                               READY   STATUS    RESTARTS   AGE
