@@ -38,8 +38,8 @@ Output:
 backup.mariadb.persistentsys/mariadb-backup created
 ```
 
-This CR will schedule backup of MariaDB at defined schedule.The Database backup files will be stored at location: '/mnt/backup'. 
-This location '/mnt/backup' should be created before applying the CR. 
+This Custom Resource will schedule backup of MariaDB at defined schedule.The Database backup files will be stored at location: '/mnt/backup'. 
+This location '/mnt/backup' should be created before applying the Custom Resource. 
 
 To Ensure that cronjob is configured correctly, run below command:
 
