@@ -54,7 +54,7 @@ grafana-operator-7574bbdbc9-skdk8   1/1     Running   0          45s
 
 
 Note: If you are installing from operatorhub, then by default it installs the operator in my-grafana-operator namespace.
-Below steps assumes that its deployed in my-grafana-operator namespace. 
+Below steps assume that its deployed in my-grafana-operator namespace. 
 
 
 ### Deploy Grafana Server Instance and Grafana Datasource
