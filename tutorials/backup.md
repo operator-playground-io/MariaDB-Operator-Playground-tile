@@ -25,7 +25,7 @@ spec:
 EOF
 ```
 
-Execute below command to create MariaDBBackup instance:
+Execute below command to create MariadB Backup instance:
 
 ```execute
 kubectl create -f MariaDBBackup.yaml -n my-mariadb-operator-app
@@ -48,7 +48,7 @@ To Ensure that cronjob is configured correctly, run below command:
 kubectl get cronjob -n my-mariadb-operator-app
 ```
 
-ou should see a similar output as below:
+You should see a similar output as below:
 
 
 ```
