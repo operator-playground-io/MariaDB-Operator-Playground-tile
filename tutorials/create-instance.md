@@ -50,7 +50,7 @@ kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app
 ```
 
 
-This CR will create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB Custom Resource. The location `/mnt/data` should exists or created before applying the Custom Resource. 
+This Custom Resource will create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB Custom Resource. The location `/mnt/data` should exists or created before applying the Custom Resource. 
 
 
 
