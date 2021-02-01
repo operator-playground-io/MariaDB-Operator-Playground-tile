@@ -139,7 +139,7 @@ spec:
   type: NodePort
   ports:
   - name: web
-    nodePort: 30101
+    nodePort: 30200
     port: 9090
     protocol: TCP
     targetPort: 3000
