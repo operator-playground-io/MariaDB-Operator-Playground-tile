@@ -19,7 +19,7 @@
     ]
   },
 "deployment_information": {
-  "Operator Project": "NA",
+  "Operator Project": "N/A",
   "Deployment Namespace": "my-mariadb-operator-app"
 },
   "commands": [
