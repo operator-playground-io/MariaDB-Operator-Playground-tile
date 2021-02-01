@@ -88,7 +88,7 @@ Else proceed as follows:
 
 ### Step 2: Verify prometheus monitoring metrics
 
-Access the Prometheus dashboard using below link:
+Access the Prometheus dashboard using below URL:
 
 http://##DNS.ip##:30100
 
@@ -139,8 +139,7 @@ Port value of "grafana" Service NodePort is : 30101
 
 We can access the Grafana dashboard on the nodePort : 30101 using below url:
 
-
-Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30101</a> to access Grafana Dashboard from your browser.
+<a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30101</a> 
 
 
 You will see the Grafana page loading as below :
