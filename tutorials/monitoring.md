@@ -76,7 +76,7 @@ To enable monitoring services, you need to :
 
 2. Install Grafana Operator and Deploy Grafana Server Instance and Grafana Data-Source
 
-If above prerequisites are already fullfilled, you can proceed with Step2 and Step4.
+If above prerequisites are already fulfilled, you can proceed with Step 2 and Step 4.
 
 Else proceed as follows: 
 
@@ -134,7 +134,7 @@ grafana-operator-metrics   ClusterIP   10.99.122.95    <none>        8080/TCP   
 grafana-service            ClusterIP   10.109.139.18   <none>        3000/TCP         5m53s
 ```
 
-Port value of "grafana" Service NodePort is : 30101
+Port value of "grafana" Service of TYPE NodePort is : 30101
 
 
 We can access the Grafana dashboard on the nodePort : 30101 using below url:
