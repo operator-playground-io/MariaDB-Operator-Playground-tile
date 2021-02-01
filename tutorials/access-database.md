@@ -83,7 +83,7 @@ use testdb;
 create table Population(year numeric,population numeric);
 ```
 
-- Insert datas into the table 
+- Insert data into the table 
 
 ```execute
 insert into Population values(2017,1380004385 );
