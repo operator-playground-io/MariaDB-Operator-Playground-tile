@@ -73,6 +73,9 @@ mariadb-operator-78c95468-m824g   1/1     Running   0          118s
 mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 ```
 
+Note: Please wait till Pod STATUS will be "Running" and then proceed further.
+
+
 ***Verify services:***
 
 
