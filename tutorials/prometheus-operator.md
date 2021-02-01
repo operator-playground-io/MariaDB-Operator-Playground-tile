@@ -43,7 +43,7 @@ From above output, once operator is successfully installed, **PHASE** will be as
 kubectl get pods -n operators
 ```
 
-OutputYou should see a similar output as below:
+Output should see a similar output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -101,7 +101,7 @@ prometheus.monitoring.coreos.com/server created
 ```
 
 
-- Check the pods status using below commands:
+- Check the pods status using below command:
 
 
 
@@ -116,6 +116,9 @@ NAME                                   READY   STATUS    RESTARTS   AGE
 prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          14m
 prometheus-server-0                    3/3     Running   1          40s
 ```
+
+Please wait till Pod STATUS will be "Running" and then proceed further.
+
 
 Step 4: Create below yaml definition of the Custom Resource to create the service to access prometheus server:
 
@@ -199,7 +202,7 @@ servicemonitor.monitoring.coreos.com/mariadb-monitor created
 ```
 
 
-- Check the pods status using below commands:
+- Check the pods status using below command:
 
 
 
@@ -207,3 +210,4 @@ servicemonitor.monitoring.coreos.com/mariadb-monitor created
 kubectl get pods -n operators
 ```
 
+Note: Please wait till Pod STATUS will be "Running" and then proceed further.
