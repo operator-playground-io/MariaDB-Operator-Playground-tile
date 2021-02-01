@@ -129,17 +129,17 @@ Output :
 
 ```
 NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-grafana                    NodePort    10.101.18.57    <none>        9090:30101/TCP   5m31s
+grafana                    NodePort    10.101.18.57    <none>        9090:30200/TCP   5m31s
 grafana-operator-metrics   ClusterIP   10.99.122.95    <none>        8080/TCP         6m45s
 grafana-service            ClusterIP   10.109.139.18   <none>        3000/TCP         5m53s
 ```
 
-Port value of "grafana" Service of TYPE NodePort is : 30101
+Port value of "grafana" Service of TYPE NodePort is : 30200
 
 
-We can access the Grafana dashboard on the nodePort : 30101 using below url:
+We can access the Grafana dashboard on the nodePort : 30200 using below url:
 
-<a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30101</a> 
+<a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> 
 
 
 You will see the Grafana page loading as below :
@@ -168,9 +168,9 @@ Now you will be able to see the Dashboard like below:
 ![](_images/dashboard.png)
 
 
-### Configure Grafana Dashboard to visualise MariaDB monitoring metrics
+### Configure Grafana Dashboard to visualize MariaDB monitoring metrics
 
-Learn how to Configure Grafana Dashboard to visualise MariaDB monitoring metrics from this tutorial "8: Grafana Dashboard".
+Learn how to Configure Grafana Dashboard to visualize MariaDB monitoring metrics from this tutorial "8: Grafana Dashboard".
 
 
 
