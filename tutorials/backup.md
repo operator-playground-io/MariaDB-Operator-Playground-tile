@@ -3,7 +3,7 @@ title: MariaDB Backup Tutorial
 description: This tutorial explains how to schedule backup of MariaDB
 ---
 
-### create below yaml definition of the Custom Resource to create Instance for MariaDB Backup
+### Create below yaml definition of the Custom Resource to create Instance for MariaDB Backup
 
 ```execute
 cat <<'EOF' > MariaDBBackup.yaml
