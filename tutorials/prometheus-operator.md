@@ -54,7 +54,7 @@ In above output, STATUS as "Running" shows the pods are up and running.
 
 
 If you are installing from operatorhub, then by default it installs the operator in operators namespace.
-Below steps assumes that its deployed in operators namespace.
+Below steps assume that its deployed in operators namespace.
 
 
 
