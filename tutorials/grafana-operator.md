@@ -148,7 +148,7 @@ spec:
 EOF
 ```
 
-Step 7:Execute below command to create grafana Service:
+Step 7: Execute below command to create grafana Service:
 
 ```execute
 kubectl create -f grafana_service.yaml -n my-grafana-operator
@@ -185,7 +185,7 @@ EOF
 
 Here we are choosing Prometheus as datasourse.
 
-Step 9:Execute below command to create instance of Grafana datasource:
+Step 9: Execute below command to create instance of Grafana datasource:
 
 
 ```execute
