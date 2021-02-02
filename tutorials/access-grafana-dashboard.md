@@ -12,7 +12,7 @@ Data source could be a database(MySQL) or a collection of metrics(Prometheus).
 In earlier steps we have created a database named "testdb" with a table: "Population".
 Here we will configure Grafana to connect MySQL with the DB and table.
 
-***Create your datasource as MySQL***
+***Create your MYSQL datasource***
 
 ***Steps:***
 
