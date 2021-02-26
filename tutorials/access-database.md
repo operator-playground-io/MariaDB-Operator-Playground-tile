@@ -5,17 +5,19 @@ description: This tutorial explains how to access MariaDB Database
 
 ### Access MariaDB Database 
 
-Execute below commands to connect with server and check for the newly created custom database (test-db)
+To access MariaDB database, you need to connect with server and check for newly created custom database, i.e (test-db).
 
 
-- Get MariaDB Server Instance podname by using command :
+Follow the steps below to proceed.
+
+**Step 1: Get MariaDB Server Instance podname.**
 
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-Output:
+This should produce the output as below.
 
 ```
 NAME                                         READY   STATUS    RESTARTS   AGE
@@ -24,16 +26,19 @@ mariadb-server-5dccfb7b59-rhxkm              1/1     Running   0          2d18h
 ```
 
 
-- Connect to MariaDB Server pod.
+Step 2: Connect to MariaDB Server pod.
 
-  Copy below command to the terminal,add the podname of MariaDB Server Instance.
+To do so,
+
+- Copy the command below to the terminal, then add the podname of MariaDB Server Instance.
+
     
 ```copycommand
  kubectl exec -it <podname> bash -n my-mariadb-operator-app
  ```
 
 
-- Connect to the database using username **db-user** and password **db-user**
+Step 3: Connect to the database using username db-user and password db-user.
 
 
  ```execute
@@ -41,14 +46,14 @@ mariadb-server-5dccfb7b59-rhxkm              1/1     Running   0          2d18h
  ```
 
 
-- list database
+Step 4: Display the database list.
 
 ```execute
 show databases;
 ```
 
 
-- exit the database.
+Step 5: Exit the database.
 
 
 ```execute
@@ -56,34 +61,34 @@ exit
 ```
 
 
-- To login through root user, use below command:
+Step 6: Login as `root’ user.
 
 
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
-- Create database testdb
+Step 7: Create database ‘testdb’
 
 ```execute
 create database testdb;
 ```
 
 
-- Use the testdb to create some table 
+Step 8: Use the testdb database to create some table.
 
 ```execute
 use testdb;
 ```
 
 
-- Create table 
+Step 9: Create a table, say Population and define the attributes.
 
 ```execute
 create table Population(year numeric,population numeric);
 ```
 
-- Insert data into the table 
+Step 10: Insert some data values into the table.
 
 ```execute
 insert into Population values(2017,1380004385 );
@@ -101,21 +106,24 @@ insert into Population values(2019,1352642280 );
 insert into Population values(2020,1338676785 );
 ```
 
-
-- Retrieve the data from table
+Step 11: Retrieve the data from constructed table.
 
 ```execute
 select * from Population;
 ```
 
-- Exit from testdb :
+Step 12: Exit from testdb database.
 
 ```execute
 exit
 ```
 
-- Exit from pod :
+Step 12: Exit from pod.
 
 ```execute
 exit
 ```
+
+### Conclusion
+
+We are able to access MariaDB Database and created table "Population" inside a new database "testdb".
