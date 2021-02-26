@@ -6,35 +6,35 @@
 
 ### Overview:
 
-Mariadb Operator enables you to create MariaDB server and database easily by defining simple Custom Resource.The MariaDB Operator enables customers to deploy MariaDB Platform in a variety of database configurations in a Kubernetes environment and is a key technology for MariaDB’s cloud strategy.
+MariaDB Operator is a key technology for MariaDB cloud strategy that assists in creating MariaDB server and database easily by defining basic Custom Resource. This operator enables the customers to deploy MariaDB platform in a variety of database configurations in a Kubernetes environment. 
 
-### Operator's features are as follows:
+### Features of MariaDB Operator:
 
 - Setup a MariaDB server with configured version.
 
 - Create a custom database along with a user credential set for the custom database.
 
-- Operator uses Persistent Volume where MariaDB can write its data files.
+- Persistent Volume usage where MariaDB can write its data files.
 
-- Seamless upgrades of MariaDB is possible without loosing existing data.
+- Seamless upgrades of MariaDB without loosing existing data.
 
-- Take full backup of Database at user defined location.
+- Take full backup of Database at user-defined location.
 
 - Schedule backup at regular intervals.
 
-- Monitor metrics for mariadb node.
+- Monitor metrics for for MariaDB node.
 
 
 ### Objective of tutorial
 
 In this tutorial,we are going to cover following topics:
 
-- How to Install MariaDB Operator and verify its successful installation.
-- Create Instance Of MariaDB Operator and verify status of pods and services.
-- How to access DB Instance and create database tables on MariaDB.
-- How to Schedule backup of MariaDB at regular intervals.
-- Enable monitoring services on MariaDB Server using Prometheus and Grafana Operator.
-- Cleanup Operators.
+- Install MariaDB Operator and verify its successful installation.
+- Create an instance of MariaDB Operator and verify status of pods and services.
+- Access MariaDB Instance and create database tables in MariaDB.
+- Schedule backup of MariaDB at regular intervals.
+- Enable Monitoring services on MariaDB Server using Prometheus and Grafana Operator.
+- Cleanup the Operator resources.
 
 
 
