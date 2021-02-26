@@ -1,29 +1,30 @@
 ---
-title: Check the MariaDB Operator status
-description: This tutorial is to verify operator have been created successfully without any error
+title: MariaDB Operator installation verification
+description: Learn how to verify that the MariaDB Operator has been properly installed in the namespace.
 ---
 
 
-### Check the status of MariaDB Operator
+### MariaDB Operator status verification 
 
 
-- After MariaDB Operator installation, verify that your operator got successfully installed by executing the below command:
+**Step 1: Verify that the MariaDB Operator has been installed successfully by executing below command.**
+
 
 ```execute
 kubectl get csv -n my-mariadb-operator-app
 ```
 
-Output:
+You will see a similar output as below.
 
 ```
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
 mariadb-operator.v0.0.4   Mariadb Operator   0.0.4     mariadb-operator.v0.0.3   Succeeded
 ```
 
-Note: Once operator is successfully installed, Output PHASE should be as "Succeeded".
+Note: If the operator is successfully installed, the output should mention the PHASE as "Succeeded".
 
 
-- Check the Pods status using below command:
+**Step 2: Check the status of Operator pods by running the command below.**
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
@@ -36,4 +37,9 @@ NAME                               READY   STATUS    RESTARTS   AGE
 mariadb-operator-f96ddc69f-d5vgr   1/1     Running   0          100s
 ```
 
-Note: In above output, STATUS as "Running" shows the pods are up and running.
+Note: In above output, STATUS is "Running", which shows that the operator pods are up and active.
+
+
+### Conclusion
+
+This will verify that MariaDB Operator has been installed successfully.
