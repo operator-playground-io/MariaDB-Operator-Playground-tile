@@ -1,5 +1,5 @@
 ---
-title: Prometheus Operator 
+title: Create Prometheus Operator 
 description: Learn how to create Prometheus Operator and deploy Prometheus Server and ServiceMonitor
 ---
 
