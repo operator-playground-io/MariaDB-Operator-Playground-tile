@@ -26,7 +26,7 @@ mariadb-server-5dccfb7b59-rhxkm              1/1     Running   0          2d18h
 ```
 
 
-Step 2: Connect to MariaDB Server pod.
+**Step 2: Connect to MariaDB Server pod.**
 
 To do so,
 
@@ -38,7 +38,7 @@ To do so,
  ```
 
 
-Step 3: Connect to the database using username db-user and password db-user.
+**Step 3: Connect to the database using username db-user and password db-user.**
 
 
  ```execute
@@ -46,14 +46,14 @@ Step 3: Connect to the database using username db-user and password db-user.
  ```
 
 
-Step 4: Display the database list.
+**Step 4: Display the database list.**
 
 ```execute
 show databases;
 ```
 
 
-Step 5: Exit the database.
+**Step 5: Exit the database.**
 
 
 ```execute
@@ -61,34 +61,34 @@ exit
 ```
 
 
-Step 6: Login as `root’ user.
+**Step 6: Login as `root` user.**
 
 
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
-Step 7: Create database ‘testdb’
+**Step 7: Create database ‘testdb’**
 
 ```execute
 create database testdb;
 ```
 
 
-Step 8: Use the testdb database to create some table.
+**Step 8: Use the testdb database to create some table.**
 
 ```execute
 use testdb;
 ```
 
 
-Step 9: Create a table, say Population and define the attributes.
+**Step 9: Create a table, say Population and define the attributes.**
 
 ```execute
 create table Population(year numeric,population numeric);
 ```
 
-Step 10: Insert some data values into the table.
+**Step 10: Insert some data values into the table.**
 
 ```execute
 insert into Population values(2017,1380004385 );
@@ -106,19 +106,19 @@ insert into Population values(2019,1352642280 );
 insert into Population values(2020,1338676785 );
 ```
 
-Step 11: Retrieve the data from constructed table.
+**Step 11: Retrieve the data from constructed table.**
 
 ```execute
 select * from Population;
 ```
 
-Step 12: Exit from testdb database.
+**Step 12: Exit from testdb database.**
 
 ```execute
 exit
 ```
 
-Step 12: Exit from pod.
+**Step 13: Exit from pod.**
 
 ```execute
 exit
