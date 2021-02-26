@@ -1,30 +1,30 @@
 ---
-title: Enable Monitoring to MariaDB
-description: This tutorial explains how to Enable Monitoring service to MariaDB
+title: Enable Monitoring for MariaDB
+description: Learn how to enable monitoring service for MariaDB.
 ---
+
 
 ### Enable Monitoring service on MariaDB 
 
-Step 1: 
 
-- Execute below command to get services of MariadB in "my-mariadb-operator-app" namespace:
+**Step 1: Execute below command to get the services of MariaDB in "my-mariadb-operator-app" namespace.**
   
   ```execute
   kubectl get svc -n my-mariadb-operator-app
   ```
 
- Output:
+ This should produce the output like below.
+ 
  ```
-      NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+  NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
  mariadb-operator-metrics   ClusterIP   10.111.158.91    <none>        8383/TCP,8686/TCP   3d4h
  mariadb-service            NodePort    10.106.178.202   <none>        80:30685/TCP        3d4h
  ```
  
-- Get the port of mariadb-service:
-  
-  From above command's output, mariadb-service port is 30685 
+From the above output, we get the port for mariadb-service as 30685.
 
-- To enable monitoring using Prometheus exporter pod and service, create the below yaml definition of the Custom Resource:
+
+**Step 2: Create the below yaml definition of the Custom Resource to enable monitoring using Prometheus exporter pod and service.**
 
 
 ```execute
@@ -46,60 +46,57 @@ spec:
 EOF
 ```
 
-Note: The database host and port should be correct for metrics to work.
+Note: Make sure you enter correct port number and database host for the metrics to work.
 
 
 
-Step 2: Execute below command to Create Instance of Monitoring: 
+**Step 3: Execute the command below to create an instance of monitoring service.**
 
 ```execute
 kubectl create -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
 ```
 
-Output:
+The output should look like below.
 
 
 ```
 monitor.mariadb.persistentsys/mariadb-monitor created
 ```
 
-This will start Prometheus exporter pod and service. 
+This will start the Prometheus exporter pod and service.
 
 
 
 
-## Create monitoring resources 
+## Create Monitoring Resources
 
-To enable monitoring services, you need to :
+To enable monitoring services, you need to:
+a.	 Install Prometheus Operator and deploy Prometheus Instance and ServiceMonitor
+b.	 Install Grafana Operator and deploy Grafana Server Instance and Grafana Data-Source
+If the above prerequisites are already fulfilled, you can proceed with Step 2 and Step 4.
+Else, follow the below steps to perform the above tasks.
 
-1. Install Prometheus Operator and Deploy Prometheus Instance and ServiceMonitor 
-
-2. Install Grafana Operator and Deploy Grafana Server Instance and Grafana Data-Source
-
-If above prerequisites are already fulfilled, you can proceed with Step 2 and Step 4.
-
-Else proceed as follows: 
 
 
 ### Step 1: Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor
  
- Learn how to Install Prometheus operator and Deploy Prometheus Instance and ServiceMonitor from tutorial "6: Create Prometheus Operator".
+ Refer tutorial “Create Prometheus Operator”.
+ 
 
+### Step 2: Access the Prometheus Dashboard.
 
-### Step 2: Verify prometheus monitoring metrics
-
-Access the Prometheus dashboard using below URL:
+Access the Prometheus Dashboard using the below URL:
 
 http://##DNS.ip##:30100
 
-- On the prometheus UI, Go to Status -> Targets to see endpoints.
+- On the Prometheus UI, go to Status -> Targets to view the endpoints.
 
 
  ![](_images/targets.PNG)
 
-Note: It may take some time to visible Target's endpoints.
+Note: It may take some time for the Target's endpoints to become visible.
 
-- From the dropdown you can select the query and click on "Execute" to see MariaDB Metrics. See below snapshot :
+- From the dropdown, you can select the query and click on "Execute" to see MariaDB Metrics. Refer the below snapshot.
 
 
 ![](_images/queryexecution.PNG)
@@ -107,17 +104,17 @@ Note: It may take some time to visible Target's endpoints.
 
 
 
-### Step 3: Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source
+### Step 3: Install Grafana Operator and Deploy Grafana Server and DataSource
 
 
-Learn how to Install Grafana Operator and Deploy Grafana Server and Gafana Data-Source from tutorial "7: Create Grafana Operator".
+Refer the tutorial: "7: Create Grafana Operator".
 
 
 
 ### Step 4: Access Grafana dashboard
 
 
-- Execute below command to get all services in "my-grafana-operator" namespace:
+- Execute the command below to retrieve all the services in “my-grafana-operator” namespace.
 
 
 ```execute
