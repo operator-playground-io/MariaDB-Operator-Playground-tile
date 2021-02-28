@@ -1,9 +1,11 @@
 ---
-title: MariaDB Backup Tutorial
-description: This tutorial explains how to schedule backup of MariaDB
+title: MariaDB Backup 
+description: Learn how to schedule backup for MariaDB
 ---
 
-### Create below yaml definition of the Custom Resource to create Instance for MariaDB Backup
+### Create MariaDB Backup Instance 
+
+**Step 1: Create Custom resource yaml file to Setup a MariaDB Backup Instance.**
 
 ```execute
 cat <<'EOF' > MariaDBBackup.yaml
@@ -25,21 +27,21 @@ spec:
 EOF
 ```
 
-Execute below command to create MariadB Backup instance:
+Step 2: Execute the command below to create an instance of MariaDB Backup.
+
 
 ```execute
 kubectl create -f MariaDBBackup.yaml -n my-mariadb-operator-app
 ```
 
 
-Output:
+This should display the following output:
 
 ```
 backup.mariadb.persistentsys/mariadb-backup created
 ```
 
-This Custom Resource will schedule backup of MariaDB at defined schedule.The Database backup files will be stored at location: '/mnt/backup'. 
-This location '/mnt/backup' should be created before applying the Custom Resource. 
+Note: The Custom Resource will schedule the backup of MariaDB at a defined interval. The Database backup files will be stored at the location: '/mnt/backup'. Ensure that you create this location '/mnt/backup' should be created before applying the Custom Resource.
 
 To Ensure that cronjob is configured correctly, run below command:
 
