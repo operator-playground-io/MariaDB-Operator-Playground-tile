@@ -1,6 +1,6 @@
 ---
-title: MariaDB Operator Tutorial
-description: This tutorial explains how to access MariaDB Database
+title: MariaDB Database Access and table creation inside database.
+description: Learn how to access MariaDB Database and create table inside database.
 ---
 
 ### Access MariaDB Database 
