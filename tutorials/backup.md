@@ -43,7 +43,7 @@ backup.mariadb.persistentsys/mariadb-backup created
 
 Note: The Custom Resource will schedule the backup of MariaDB at a defined interval. The Database backup files will be stored at the location: '/mnt/backup'. Ensure that you create this location before applying the Custom Resource.
 
-Step 3: Execute the command below to check the configuration status of cronjob.
+**Step 3: Execute the command below to check the configuration status of cronjob.**
 
 
 ```execute
@@ -61,3 +61,4 @@ Once the operation is successful, a new job will take database backup at schedul
 
 ### Conclusion
 
+Backup for MariaDB has been scheduled and it will take database backup at scheduled interval.
