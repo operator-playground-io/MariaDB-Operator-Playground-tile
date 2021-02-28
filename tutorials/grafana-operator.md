@@ -1,18 +1,14 @@
 ---
-title: Grafana Operator Tutorial
-description: This tutorial explains how to create Grafana Operator
+title: Grafana Operator
+description: Learn how to Install Grafana Operator and Deploy Grafana Server Instance, Grafana Data Source and Grafana Dashboard 
 ---
 
 
-### Install Grafana Operator and Deploy Grafana, Grafana Data Source and Grafana Dashboard 
+### Install Grafana Operator and Verify the Status
 
+Follow the below steps to install Grafana Operator.
 
-Install Grafana Operator from operatorhub.
-
-OperatorHub link: https://operatorhub.io/operator/grafana-operator
-
-
-Step 1: Install the Grafana operator by running the following command:
+**Step 1: Run the following command to install Grafana Operator.**
 
 
 ```execute
@@ -20,47 +16,54 @@ kubectl create -f https://operatorhub.io/install/grafana-operator.yaml
 ```
 
 
-This Operator will be installed in the "my-grafana-operator" namespace and will be usable from this namespace only.
+This Operator will be installed in the "my-grafana-operator" namespace and will be usable/accessible from this namespace only.
 
 
 
-Step 2: After installation, verify that your operator got successfully installed by executing the below command:
+**Step 2: After installation is complete, run the command below to verify that your Operator is successfully installed.** 
 
 ```execute
 kubectl get csv -n my-grafana-operator
 ```
 
-You should see a similar output as below:
+This should display the below output.
 
 ```output
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
 grafana-operator.v3.2.0   Grafana Operator   3.2.0     grafana-operator.v3.0.2   Succeeded
 ```
 
-**Please wait till `PHASE` status will be `Succeeded` and then proceed further.**
+Please wait for the PHASE status to be “Succeeded”, then proceed.
 
-After the installation is successful , you can check your operator's pods by executing the below command:
+
+**Step 3: Check the status of pods.**
+
+After the installation is successful, you can check the status of your operator's pods by executing the command as below:
 
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
 
-You should see a pod starting with 'grafana-operator' with Ready value '1/1' and Status 'Running' like the output below.
+You should see a pod with:
+a.	NAME starting with 'grafana-operator' 
+b.	READY value as '1/1' 
+c.	STATUS as 'Running'
 
-```output
+This should display the below output.
+
+```
 NAME                                READY   STATUS    RESTARTS   AGE
 grafana-operator-7574bbdbc9-skdk8   1/1     Running   0          45s
 ```
 
 
-Note: If you are installing from operatorhub, then by default it installs the operator in my-grafana-operator namespace.
-Below steps assume that its deployed in my-grafana-operator namespace. 
+Note: If you are installing the Operator from operatorhub.io, then by default it installs the operator in ‘my-grafana-operator’ namespace. In the below steps, we assume that it is deployed in `my-grafana-operator` namespace only. 
 
 
-### Deploy Grafana Server Instance and Grafana Datasource
+### Deploy Grafana Server Instance
 
 
-Step 3: Create below yaml definition of the Custom Resource to create Grafana Instance:
+**Step 1: Create the below yaml definition of Custom resourse for Grafana Server Instance.**
 
 
 ```execute
@@ -93,29 +96,28 @@ EOF
 ```
 
 
-Step 4: Execute below command to create Grafana instance:
+**Step 2: Execute the command below to create Grafana instance.**
 
 
 ```execute
 kubectl create -f grafana-server.yaml -n my-grafana-operator
 ```
 
-You will see the following resources created:
+This will create the following resources.
 
-```output
+
+```
 grafana.integreatly.org/example-grafana created
 ```
 
 
-
-
-Step 5: Check pods status:
+**Step 3: Check the status of pod.**
 
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
 
-You should see a similar output as below:
+This should produce the output as below.
 
 ```
 NAME                                  READY   STATUS    RESTARTS   AGE
@@ -123,10 +125,10 @@ grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-Note: Please wait till Pod STATUS will be "Running" and then proceed further.
+Note: The process may take a few minutes. Please do not proceed till you find the pod STATUS as “Running”.
 
 
-Step 6: Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort:
+**Step 4: Create the below custom resource yaml definition to create Grafana Service of type `NodePort`.**
 
 
 ```execute
@@ -148,19 +150,22 @@ spec:
 EOF
 ```
 
-Step 7: Execute below command to create grafana Service:
+**Step 5: Run the command below to create Grafana Service.**
+
 
 ```execute
 kubectl create -f grafana_service.yaml -n my-grafana-operator
 ```
 
-Output:
+You will see output as below.
+
 ```
 service/grafana created
 ```
 
+### Create an Instance of Grafana DataSource
 
-Step 8: Create below yaml definition of the Custom Resource to create Instance of Grafana Datasource :
+**Step 1: Create the below Custom resource yaml file to create Instance of Grafana Datasource.**
 
 ```execute
 cat <<'EOF' > prometheus-datasources.yaml
@@ -183,24 +188,22 @@ spec:
 EOF
 ```
 
-Here we are choosing Prometheus as datasourse.
+In the above details, we have chosen Prometheus as our DataSource.
 
-Step 9: Execute below command to create instance of Grafana datasource:
+**Step 2: Create an instance of Grafana DataSource using the following command.**
 
 
 ```execute
 kubectl create -f prometheus-datasources.yaml -n my-grafana-operator
 ```
 
-Output:
+This will produce the below output for the instance created.
 
 ```
 grafanadatasource.integreatly.org/prometheus-grafanadatasource created
 ```
 
-
-Step 10: Check Pods status:
-
+**Step 3: Check the status of pods.**
 
 
 ```execute
@@ -208,7 +211,7 @@ kubectl get pods -n my-grafana-operator
 ```
 
 
-You should see a similar output as below:
+This will produce the below output.
 
 ```
 NAME                                  READY   STATUS    RESTARTS   AGE
@@ -216,4 +219,13 @@ grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-Note: Please wait till Pod STATUS will be "Running" and then proceed further.
+Note: The process may take a few minutes. Please wait until the STATUS turns “Running”, then proceed.
+
+
+### Conclusion
+
+Following the above procedure, you’re able to:
+- Install Grafana Operator
+- Deploy Grafana Service
+- Create an instance of Grafana Server and Grafana DataSource
+Additionally, you should be able to access Grafana dashboard using the Admin user credentials.
