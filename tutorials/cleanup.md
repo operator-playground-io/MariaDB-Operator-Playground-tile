@@ -1,6 +1,6 @@
 ---
-title: MariaDB Operator cleanup Tutorial
-description: This tutorial explains how to cleanup Operator
+title: MariaDB Operator cleanup 
+description: Learn how to cleanup the MariaDB Operator
 ---
 
 
@@ -8,7 +8,7 @@ description: This tutorial explains how to cleanup Operator
 
 
 
-***Delete the operator's Custom Resources by kubectl delete commands :***
+**Step 1: Delete the operator's Custom Resources by using `kubectl delete` commands as below.**
 
 
  ```execute 
@@ -25,7 +25,7 @@ description: This tutorial explains how to cleanup Operator
  
 
 
-***Delete the operator by kubectl delete command:***
+**Step 2: Delete the operators by using `kubectl delete` command as below.**
  
  
   
@@ -35,28 +35,29 @@ description: This tutorial explains how to cleanup Operator
  kubectl delete -f https://operatorhub.io/install/grafana-operator.yaml 
  ```
  
-***Deleting the CSV resource ***
+**Step 3: Deleting the CSV resource.**
 
-- Find the Prometheus CSV in the namespace "Operators"
+ **Step 3.1: Find the Prometheus CSV in the namespace "Operators".**
 
-Example:
 
 ```
 kubectl get csv -n operators
 ```
 
-- Delete that CSV :
+ **Step 3.2: Delete the CSV.**
 
-Example:
 
 ```
 kubectl delete csv/prometheusoperator.0.37.0 -n operators
 ```
-Note: The csv value may be different from above value.In the above delete csv command,Use the csv retrived by kubectl get csv command.  
 
-***Delete all the yaml files:***
+Note: The csv value may be different from above value. In the above `delete csv` command, use the csv retrieved from `kubectl get csv` command.
+
+
+
+**Step 4: Delete all the yaml files.**
  
- Example:
+ 
  
  ```execute  
  rm -rf MariaDBserver.yaml 
@@ -68,4 +69,7 @@ Note: The csv value may be different from above value.In the above delete csv co
  rm -rf GrafanaInstance.yaml
  rm -rf GrafanaService.yaml
 ```
-  
+
+### Conclusion
+
+You have successfully cleaned up the MariaDB Operator resources.
