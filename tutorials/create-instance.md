@@ -1,13 +1,13 @@
 ---
-title: MariaDB Create Instance  Tutorial
-description: This tutorial explains how to create Instance of MariaDB Operator
+title: MariaDB Instance creation
+description: Learn how to create Instance of MariaDB Operator
 ---
 
-### Create Instance of MariaDB 
+### Create an Instance of MariaDB
 
 
-
-***Create below yaml which will create a Custom Resource for MariaDB Server Instance and also create database called test-db, along with user credentials:***
+ 
+**Step 1: Create the below yaml definition of the custom resource for MariaDB server instance, and setup a database ‘test-db’ with the provided user credentials.**
 
 ```execute
 cat <<'EOF' > MariaDBserver.yaml
@@ -42,7 +42,7 @@ spec:
 EOF
 ```
 
-***Execute below command to create MariaDBserver instance :***
+**Step 2: Execute the following command to create MariaDB Server instance.**
 
 
 ```execute
@@ -50,22 +50,24 @@ kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app
 ```
 
 
-This Custom Resource will create a database called `test-db`, along with user credentials. The Server image name is mentioned in "image" parameter. MariaDB Database uses external location on host to store all Database files. This location is default set to `/mnt/data` from MariaDB Custom Resource. The location `/mnt/data` should exists or created before applying the Custom Resource. 
+The generated Custom Resource will create a database called test-db, along with user credentials. The Server image name is mentioned in "image" parameter.
+
+Note: MariaDB Database uses external location on host to store all Database files. This location is by default set to /mnt/data from MariaDB Custom Resource. This location should be created before applying the Custom Resource.
+ 
 
 
 
 ### Verify MariaDB Deployment
 
 
-
-***Verify pods status:*** 
+**Step 1: Verify the status of pods.** 
 
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app 
 ```
 
-You should see a similar output as below:
+You should see an output like below.
 
 ```
 NAME                              READY   STATUS    RESTARTS   AGE
@@ -73,10 +75,10 @@ mariadb-operator-78c95468-m824g   1/1     Running   0          118s
 mariadb-server-778b9b7cb5-nt6n5   1/1     Running   0          109s
 ```
 
-Note: Please wait till Pod STATUS will be "Running" and then proceed further.
+It may take a few minutes for the pod STATUS to be “Running”. Do not continue till it appears on the screen. 
 
 
-***Verify services:***
+**Step 2: Verify services using the command below.**
 
 
 
@@ -84,7 +86,7 @@ Note: Please wait till Pod STATUS will be "Running" and then proceed further.
 kubectl get svc -n my-mariadb-operator-app 
 ```
 
-You should see a similar output as below:
+You should see an output as shown below.
 
 
 ```
@@ -93,13 +95,13 @@ mariadb-operator-metrics   ClusterIP   10.98.179.105    <none>        8383/TCP,8
 mariadb-service            NodePort    10.105.103.156   <none>        80:30685/TCP        73s
 ```
 
-Service "mariadb-service" is a NodePort that exposes mariadb on port 3306
+The service `mariadb-service` is of type NodePort that exposes mariadb on port 3306. See the description using the following command.
 
 ```execute
 kubectl describe service/mariadb-service -n my-mariadb-operator-app
 ```
 
-You should see a similar output as below:
+This should produce the following output.
 
 ```
 Name:                     mariadb-service
@@ -120,3 +122,6 @@ External Traffic Policy:  Cluster
 Events:                   <none>
 ```
 
+### Conclusion
+
+You’re done with creating an instance of MariaDB operator.
