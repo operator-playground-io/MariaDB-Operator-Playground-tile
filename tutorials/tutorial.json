@@ -34,8 +34,8 @@
          "description":"Learn how to enable monitoring service for MariaDB.",
          "duration":"30 min",
          "tutorial_name":"monitoring.md",
-         "title":"5. Enable Monitoring for MariaDB
-"
+         "title":"5. Enable Monitoring for MariaDB"
+
       },
 	  
 	  {
