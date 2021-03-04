@@ -35,10 +35,9 @@
          "duration":"30 min",
          "tutorial_name":"monitoring.md",
          "title":"5. Enable Monitoring for MariaDB"
-
       },
 	  
-	  {
+      {
          "description":"Learn how to create Prometheus Operator and deploy Prometheus Server and ServiceMonitor",
          "duration":"30 min",
          "tutorial_name":"prometheus-operator.md",
