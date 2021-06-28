@@ -36,13 +36,13 @@ Once you complete the above steps, proceed with following steps to execute the s
 - Get the sample code.
 
 ```execute
-cd /home/student/projects && git clone https://github.com/Andi-Cirjaliu/edge-mariadb.git
+cd /home/student/projects && git clone https://github.com/operator-playground-io/MariaDB-sample.git
 ```
 
 - Navigate to the example.
 
 ```execute
-cd edge-mariadb
+cd MariaDB-sample
 ```
 
 - Set the MariaDB instance.
