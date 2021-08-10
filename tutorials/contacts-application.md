@@ -74,8 +74,6 @@ skaffold dev
 
 ### Access the application
 
-- Click on the Key () icon on the dashboard and copy the value under the DNS section and IP field.
-
 Follow the below URL: 
 
 http://##DNS.ip##:30501
