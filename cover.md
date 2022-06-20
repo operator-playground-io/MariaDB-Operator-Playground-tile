@@ -22,8 +22,6 @@ MariaDB Operator is a key technology for MariaDB cloud strategy that assists in 
 
 - Schedule backup at regular intervals.
 
-- Monitor metrics for for MariaDB node.
-
 
 ### Objective of tutorial
 
@@ -33,7 +31,6 @@ In this tutorial,we are going to cover following topics:
 - Create an instance of MariaDB Operator and verify status of pods and services.
 - Access MariaDB Instance and create database tables in MariaDB.
 - Schedule backup of MariaDB at regular intervals.
-- Enable Monitoring services on MariaDB Server using Prometheus and Grafana Operator.
 - Cleanup the Operator resources.
 
 
