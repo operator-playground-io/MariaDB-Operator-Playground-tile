@@ -42,4 +42,6 @@ Note: In above output, STATUS is "Running", which shows that the operator pods a
 
 ### Conclusion
 
+##SSH.host##
+
 This will verify that MariaDB Operator has been installed successfully.
