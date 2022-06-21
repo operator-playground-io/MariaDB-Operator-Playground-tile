@@ -42,8 +42,4 @@ Note: In above output, STATUS is "Running", which shows that the operator pods a
 
 ### Conclusion
 
-##DNS.ip##
-##DNS.host##
-##DNS.appIp##
-
 This will verify that MariaDB Operator has been installed successfully.
