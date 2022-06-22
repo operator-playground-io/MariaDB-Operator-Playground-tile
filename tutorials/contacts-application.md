@@ -76,7 +76,7 @@ skaffold dev
 
 Follow the below URL: 
 
-http://##DNS.ip##:30501
+http://##SSH.host##:30501
 
 
 ### Deploy the changes to Kubernetes in Dev Mode
